@@ -8,9 +8,14 @@ namespace Snake_Ladder
 {
     internal class Program
     {
+        static int Uc1()
+        {
+            int position = 0;
+            return position;
+        }
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to snake and ladder game");
+            Console.WriteLine($"Single player start at position= {Uc1()}");          
             Console.ReadLine();
         }
     }
