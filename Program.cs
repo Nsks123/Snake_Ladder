@@ -14,17 +14,26 @@ namespace Snake_Ladder
             int position = 0;
             int last_position = 100;
             
-            while(position<=last_position) 
+            while(position<last_position) 
             {
                 int number = rnd.Next(1, 7);
                 int option = rnd.Next(0, 3);
                 switch (option)
                 {
                     case 0:
-                        Console.WriteLine("The player stays in the same position");
+                        Console.WriteLine($"The player stays in the same position = {position}");
                         break;
                     case 1:
-                        position += number;
+                        
+                        if (position + number <= last_position)
+                        {
+                            position +=number; 
+                        }
+                        else
+                        {
+                            position = last_position;
+                        }
+                       
                         Console.WriteLine($"The player moves ahead = {position}");
                         break;
                     case 2:
@@ -34,6 +43,7 @@ namespace Snake_Ladder
                             position = 0;
 
                         }
+
                         Console.WriteLine($"The player moves behind = {position}");
                         break;
 
