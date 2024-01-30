@@ -8,15 +8,13 @@ namespace Snake_Ladder
 {
     internal class Program
     {
-        static int Uc1()
-        {
-            int position = 0;
-            return position;
-        }
         static void Main(string[] args)
         {
-            Console.WriteLine($"Single player start at position= {Uc1()}");          
+            Random rnd = new Random();
+            int number=rnd.Next(1,7);
+            Console.WriteLine($"player rolls the dice to get a number = {number}");
             Console.ReadLine();
+           
         }
     }
 }
